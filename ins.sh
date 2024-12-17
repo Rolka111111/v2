@@ -236,7 +236,7 @@ TIME=$(date '+%d %b %Y')
 
 # Repo
 GIT_USER="scriptsvpnlt"
-GIT_REPO="mescripts"
+GIT_REPO="v2"
 GIT_BRANCH="main"
 REPO="https://raw.githubusercontent.com/${GIT_USER}/${GIT_REPO}/${GIT_BRANCH}/"
 REPO_SLOWDNS="https://raw.githubusercontent.com/${GIT_USER}/${GIT_REPO}/${GIT_BRANCH}/"
