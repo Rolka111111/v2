@@ -5,7 +5,7 @@
 <pre><code>apt update && apt upgrade -y && update-grub && sleep 2 && reboot</pre></code>
 
 ### INSTALL SCRIPT 
-<pre><code>apt install -y && apt update -y && apt upgrade -y && apt install lolcat -y && gem install lolcat && wget -q https://raw.githubusercontent.com/scriptsvpnlt/mescripts/main/ins.sh && chmod +x ins.sh && ./ins.sh
+<pre><code>wget -q https://raw.githubusercontent.com/scriptsvpnlt/v2/main/allos.sh && chmod +x allos.sh && ./allos.sh
 </code></pre>
 
 ### TESTED ON OS 
