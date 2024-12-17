@@ -1,0 +1,42 @@
+#!/bin/bash
+
+# Get the latest version of gotop from GitHub releases
+gotop_latest=$(curl -s https://api.github.com/repos/xxxserxxx/gotop/releases | grep tag_name | sed -E 's/.*"v(.*)".*/\1/' | head -n 1)
+
+# Download link for gotop release
+gotop_link="https://github.com/xxxserxxx/gotop/releases/download/v$gotop_latest/gotop_v$gotop_latest_linux_amd64"
+
+# Function to install gotop on Debian/Ubuntu
+install_gotop_debian_ubuntu() {
+    # Download the .deb package
+    curl -sL "$gotop_link.deb" -o /tmp/gotop.deb
+    # Install the package
+    dpkg -i /tmp/gotop.deb >/dev/null 2>&1
+    apt-get install -f -y  # To resolve any missing dependencies
+}
+
+# Function to install gotop on Alpine
+install_gotop_alpine() {
+    # Download the tar.gz package for Alpine
+    curl -sL "$gotop_link.tar.gz" -o /tmp/gotop.tar.gz
+    # Extract the tar.gz package
+    tar -xzf /tmp/gotop.tar.gz -C /tmp
+    # Move the binary to a proper directory
+    mv /tmp/gotop /usr/local/bin/gotop
+    chmod +x /usr/local/bin/gotop
+}
+
+# Determine the OS and install gotop
+if [ -f /etc/debian_version ]; then
+    # Debian/Ubuntu
+    echo "Installing gotop on Debian/Ubuntu"
+    install_gotop_debian_ubuntu
+elif [ -f /etc/alpine-release ]; then
+    # Alpine
+    echo "Installing gotop on Alpine"
+    install_gotop_alpine
+else
+    echo "Unsupported OS"
+    exit 1
+fi
+

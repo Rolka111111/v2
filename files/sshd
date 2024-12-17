@@ -1,0 +1,59 @@
+#!/bin/bash
+
+# Fungsi untuk Debian/Ubuntu
+configure_sshd_debian() {
+    echo "Mengonfigurasi SSH untuk Debian/Ubuntu..."
+    SSHD_CONFIG="/etc/ssh/sshd_config"
+
+    cat > $SSHD_CONFIG << EOF
+# OpenSSH server configuration for Debian/Ubuntu
+
+Port 22
+Port 2222
+Port 2223
+PermitRootLogin yes
+UsePAM yes
+AllowTcpForwarding yes
+X11Forwarding yes
+PrintMotd no
+Banner /etc/kyt.txt
+Subsystem sftp /usr/lib/openssh/sftp-server
+EOF
+
+    systemctl restart sshd
+    echo "SSH berhasil dikonfigurasi untuk Debian/Ubuntu."
+}
+
+# Fungsi untuk Alpine
+configure_sshd_alpine() {
+    echo "Mengonfigurasi SSH untuk Alpine Linux..."
+    SSHD_CONFIG="/etc/ssh/sshd_config"
+
+    cat > $SSHD_CONFIG << EOF
+# OpenSSH server configuration for Alpine Linux
+
+Port 22
+Port 2222
+Port 2223
+PermitRootLogin yes
+UsePAM yes
+AllowTcpForwarding yes
+X11Forwarding yes
+PrintMotd no
+Banner /etc/kyt.txt
+Subsystem sftp /usr/libexec/sftp-server
+EOF
+
+    rc-service sshd restart
+    echo "SSH berhasil dikonfigurasi untuk Alpine Linux."
+}
+
+# Deteksi OS dan konfigurasi
+if [ -f /etc/debian_version ]; then
+    configure_sshd_debian
+elif [ -f /etc/alpine-release ]; then
+    configure_sshd_alpine
+else
+    echo "OS tidak dikenali. Harap konfigurasi SSH secara manual."
+    exit 1
+fi
