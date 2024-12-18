@@ -53,32 +53,21 @@ add_repositories() {
 
 # Fungsi untuk install dependencies di Debian/Ubuntu
 install_dependencies_debian_ubuntu() {
-echo "Menginstal dependencies..."
+  echo "Memperbarui repository..."
+  apt update -y && apt upgrade -y
 
-# Update sistem dan tambahkan repositori yang diperlukan untuk Podman
-sudo apt update
-sudo apt upgrade -y
-apt update -y && apt upgrade -y
-# Tambahkan repository untuk Podman (jika belum ada)
-. /etc/os-release
-echo "deb [signed-by=/usr/share/keyrings/libpod.gpg] https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/$ID_$VERSION_ID/ /" | sudo tee /etc/apt/sources.list.d/libcontainers.list
-curl -fsSL https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/$ID_$VERSION_ID/Release.key | gpg --dearmor | sudo tee /usr/share/keyrings/libpod.gpg > /dev/null
-
-# Instal dependencies
-sudo apt update
-
-sudo apt install -y \
-  build-essential \
-  gcc g++ make cmake autoconf automake \
-  curl wget git unzip tar xz-utils \
-  python3 python3-pip python3-venv \
-  openjdk-11-jdk \
-  libssl-dev libcurl4-openssl-dev libz-dev \
-  apt-transport-https ca-certificates gnupg \
-  lsb-release nftables iptables \
-  qemu-kvm libvirt-daemon-system virt-manager \
-  docker.io poodman
-  
+  echo "Menginstal dependencies..."
+  apt install -y \
+    build-essential \
+    gcc g++ make cmake autoconf automake \
+    curl wget git unzip tar xz-utils \
+    python3 \
+    openjdk-11-jdk \
+    libssl-dev libcurl4-openssl-dev libz-dev \
+    apt-transport-https ca-certificates gnupg \
+    lsb-release nftables iptables \
+    qemu-kvm libvirt-daemon-system virt-manager \
+    docker.io
 }
 
 # Fungsi untuk install dependencies di Alpine Linux
