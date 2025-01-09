@@ -65,17 +65,17 @@ install_dependencies_alpine() {
 }
 
 
-function Detect_openVZ() {
-COLOR1="\033[92;1m"
-NC="\033[0m"
+#function Detect_openVZ() {
+#COLOR1="\033[92;1m"
+#NC="\033[0m"
 # Detect virtualized environment
-if [ "$(systemd-detect-virt)" == "openvz" ]; then
-    echo "OpenVZ is not supported"
-    exit 1
-fi
-}
+#if [ "$(systemd-detect-virt)" == "openvz" ]; then
+    #echo "OpenVZ is not supported"
+    #exit 1
+#fi
+#}
 
-Detect_openVZ
+#Detect_openVZ
 
 
 # Fungsi utama
