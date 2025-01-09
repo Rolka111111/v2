@@ -1660,45 +1660,45 @@ EOF
 
 # Menjalankan fungsi dengan animasi loading
 clear
-echo -e "\033[1;37mMengunduh base pkg......\033[0m"
+echo -e "\033[1;37mDownloading base pkg......\033[0m"
 fun_bar base_package
-echo -e "\033[1;37mMengunduh Swapp.........\033[0m"
+echo -e "\033[1;37mDownloading Swapp.........\033[0m"
 fun_bar ins_swab
-echo -e "\033[1;37mMengunduh haproxy.......\033[0m"
+echo -e "\033[1;37mDownloading haproxy.......\033[0m"
 fun_bar first_setup
 echo -e "\033[1;37mInstall ssl domain......\033[0m"
 fun_bar pasang_ssl
-echo -e "\033[1;37mMengunduh nginx.........\033[0m"
+echo -e "\033[1;37mDownloading nginx.........\033[0m"
 fun_bar nginx_install
 echo -e "\033[1;37mMake Xray Folder........\033[0m"
 fun_bar make_folder_xray
-echo -e "\033[1;37mMengunduh Xray..........\033[0m"
+echo -e "\033[1;37mDownloading Xray..........\033[0m"
 fun_bar install_xray
-echo -e "\033[1;37mMengunduh ssh Packs.....\033[0m"
+echo -e "\033[1;37mDownloading ssh Packs.....\033[0m"
 fun_bar pasang_ssh
-echo -e "\033[1;37mMengunduh Badvpn........\033[0m"
+echo -e "\033[1;37mDownloading Badvpn........\033[0m"
 fun_bar udp_mini
-echo -e "\033[1;37mMengunduh SSHD..........\033[0m"
+echo -e "\033[1;37mDownloading SSHD..........\033[0m"
 fun_bar ins_SSHD
-echo -e "\033[1;37mMengunduh Dropbear......\033[0m"
+echo -e "\033[1;37mDownloading Dropbear......\033[0m"
 fun_bar ins_dropbear
-echo -e "\033[1;37mMengunduh Vnstat........\033[0m"
+echo -e "\033[1;37mDownloading Vnstat........\033[0m"
 fun_bar ins_vnstat
-echo -e "\033[1;37mMengunduh Openvpn.......\033[0m"
+echo -e "\033[1;37mDownloading Openvpn.......\033[0m"
 fun_bar ins_openvpn
-echo -e "\033[1;37mMengunduh RcLone........\033[0m"
+echo -e "\033[1;37mDownloading RcLone........\033[0m"
 fun_bar ins_backup
-echo -e "\033[1;37mMengunduh Fail2ban......\033[0m"
+echo -e "\033[1;37mDownloading Fail2ban......\033[0m"
 fun_bar ins_Fail2ban
-echo -e "\033[1;37mMengunduh WsEPRO........\033[0m"
+echo -e "\033[1;37mDownloading WsEPRO........\033[0m"
 fun_bar ins_epro
 echo -e "\033[1;37mRestart All service.....\033[0m"
 fun_bar ins_restart
-echo -e "\033[1;37mMengunduh pack menu.....\033[0m"
+echo -e "\033[1;37mDownloading pack menu.....\033[0m"
 fun_bar ins_menu
-echo -e "\033[1;37mMengunduh pack profile..\033[0m"
+echo -e "\033[1;37mDownloading pack profile..\033[0m"
 fun_bar ins_profile
-echo -e "\033[1;37mMengunduh Udp Custom....\033[0m"
+echo -e "\033[1;37mDownloading Udp Custom....\033[0m"
 fun_bar ins_udp
 echo -e "\033[1;37mEnabled all service.....\033[0m"
 fun_bar enable_services
@@ -1707,7 +1707,7 @@ fun_bar sending_notif
 echo -e "\033[1;37mDelete packs caches.....\033[0m"
 fun_bar clear_all
 
-echo -e "\033[1;32mSemua proses selesai!\033[0m"
+echo -e "\033[1;32mAll processes complete!\033[0m"
 
 sleep 2
 function GO_DISPLAY() {
