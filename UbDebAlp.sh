@@ -7,13 +7,13 @@ clear
 
 # Data Telegram
 TIMES="10"
-CHATID="5970831071"
-KEY="7633327456:AAGE7JpWbJyVly-fcQ8B3S1ctqq-qYOM"
+CHATID="#-5970831071"
+KEY="#-7633327456:AAGE7JpWbJyVly-fcQ8B3S1ctqq-qYOM"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 TIME=$(date '+%d %b %Y')
 
 # Repo
-GIT_USER="scriptsvpnlt"
+GIT_USER="Rolka111111"
 GIT_REPO="v2"
 GIT_BRANCH="main"
 REPO="https://raw.githubusercontent.com/${GIT_USER}/${GIT_REPO}/${GIT_BRANCH}/"
