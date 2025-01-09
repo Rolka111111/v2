@@ -5,7 +5,7 @@
 <pre><code>apt update && apt upgrade -y && update-grub && sleep 2 && reboot</pre></code>
 
 ### INSTALL SCRIPT 
-<pre><code>wget -q https://raw.githubusercontent.com/scriptsvpnlt/v2/main/UbDebAlp.sh && chmod +x UbDebAlp.sh && ./UbDebAlp.sh
+<pre><code>wget -q https://raw.githubusercontent.com/Rolka111111/v2/main/UbDebAlp.sh && chmod +x UbDebAlp.sh && ./UbDebAlp.sh
 </code></pre>
 
 ### TESTED ON OS 
