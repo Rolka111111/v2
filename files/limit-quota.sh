@@ -1,6 +1,6 @@
 #!/bin/bash
 
-REPO="https://raw.githubusercontent.com/LunatiX-nc/excorzscriptlunatix/main/"
+REPO="https://raw.githubusercontent.com/Rolka111111/v2/main/"
 
 # Fungsi untuk memeriksa dan mengunduh file
 function download_files() {
