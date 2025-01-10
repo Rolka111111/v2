@@ -1009,7 +1009,8 @@ EOF
 
   # Install wondershaper untuk pembatasan bandwidth
   cd /bin
-  git clone https://github.com/LunaticTunnel/wondershaper.git >/dev/null 2>&1
+  # git clone https://github.com/LunaticTunnel/wondershaper.git >/dev/null 2>&1
+  git clone  https://github.com/magnific0/wondershaper.git >/dev/null 2>&1
   cd wondershaper
   sudo make install >/dev/null 2>&1
   cd
