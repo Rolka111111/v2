@@ -83,7 +83,7 @@ main() {
   check_root
   detect_os
 
-  echo -e "\e[92;1mSistem operasi terdeteksi: $OS $VERSION_ID \e[0m"
+  echo -e "\e[92;1mOperating system detected: $OS $VERSION_ID \e[0m"
   if [[ "$OS" == "debian" || "$OS" == "ubuntu" ]]; then
     install_dependencies_debian_ubuntu
   elif [[ "$OS" == "alpine" ]]; then
