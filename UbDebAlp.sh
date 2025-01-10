@@ -7,8 +7,8 @@ clear
 
 # Data Telegram
 TIMES="10"
-CHATID="#-5970831071"
-KEY="#-7633327456:AAGE7JpWbJyVly-fcQ8B3S1ctqq-qYOM"
+CHATID="5970831071-1"
+KEY="7633327456:AAGE7JpWbJyVly-fcQ8B3S1ctqq-qYOM-1"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 TIME=$(date '+%d %b %Y')
 
@@ -100,10 +100,10 @@ main() {
 main
 
 
-mkdir -p /etc
-echo "0YejtpvJWrAjoPj-tPfWHJbPv0nd108oHOZv-UGj" > /etc/cloudflare.key
-echo "mezzqueen293@gmail.com" > /etc/cloudflare.email
-chmod 600 /etc/cloudflare.key /etc/cloudflare.email
+# mkdir -p /etc
+# echo "0YejtpvJWrAjoPj-tPfWHJbPv0nd108oHOZv-UGj" > /etc/cloudflare.key
+# echo "mezzqueen293@gmail.com" > /etc/cloudflare.email
+# chmod 600 /etc/cloudflare.key /etc/cloudflare.email
 
 
 # ip
