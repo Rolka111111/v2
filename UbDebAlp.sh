@@ -1687,8 +1687,8 @@ echo -e "\033[1;37mDownloading Vnstat........\033[0m"
 fun_bar ins_vnstat
 echo -e "\033[1;37mDownloading Openvpn.......\033[0m"
 fun_bar ins_openvpn
-echo -e "\033[1;37mDownloading RcLone........\033[0m"
-fun_bar ins_backup
+#echo -e "\033[1;37mDownloading RcLone........\033[0m"
+#fun_bar ins_backup
 echo -e "\033[1;37mDownloading Fail2ban......\033[0m"
 fun_bar ins_Fail2ban
 echo -e "\033[1;37mDownloading WsEPRO........\033[0m"
