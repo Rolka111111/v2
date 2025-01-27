@@ -127,7 +127,7 @@ clear
 echo -e "   \e[97;1m ===========================================\e[0m"
 echo -e "   \e[1;32m    Please Select a Domain bellow type.     \e[0m"
 echo -e "   \e[97;1m ===========================================\e[0m"
-echo -e "   \e[1;32m  1). \e[97;1m Domain Pribadi \e[0m"
+echo -e "   \e[1;32m  1). \e[97;1m Domain Private \e[0m"
 echo -e "   \e[1;32m  2). \e[97;1m Domain Random  \e[0m"
 echo -e "   \e[97;1m ===========================================\e[0m"
 echo -e ""
